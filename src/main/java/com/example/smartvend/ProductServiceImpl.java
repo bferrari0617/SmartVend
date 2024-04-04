@@ -1,9 +1,9 @@
 package com.example.smartvend;
 
 import com.example.smartvend.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.example.smartvend.ProductRepository;
 import com.example.smartvend.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
