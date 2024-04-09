@@ -1,0 +1,52 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class SnackIndex {
+
+    public static void main(String[] args) {
+        Map<String, String> snackIndex = new HashMap<>();
+
+//Button Code yields corresponding snack EDIT NAMES OF SNACK
+        snackIndex.put("A1", "SnackA1");
+        snackIndex.put("A2", "SnackA2");
+        snackIndex.put("A3", "SnackA3");
+        snackIndex.put("A4", "SnackA4");
+        snackIndex.put("A5", "SnackA5");
+        snackIndex.put("B1", "SnackB1");
+        snackIndex.put("B2", "SnackB2");
+        snackIndex.put("B3", "SnackB3");
+        snackIndex.put("B4", "SnackB4");
+        snackIndex.put("B5", "SnackB5");
+        snackIndex.put("C1", "SnackC1");
+        snackIndex.put("C2", "SnackC2");
+        snackIndex.put("C3", "SnackC3");
+        snackIndex.put("C4", "SnackC4");
+        snackIndex.put("C5", "SnackC5");
+        snackIndex.put("D1", "SnackD1");
+        snackIndex.put("D2", "SnackD2");
+        snackIndex.put("D3", "SnackD3");
+        snackIndex.put("D4", "SnackD4");
+        snackIndex.put("D5", "SnackD5");
+        snackIndex.put("E1", "SnackE1");
+        snackIndex.put("E2", "SnackE2");
+        snackIndex.put("E3", "SnackE3");
+        snackIndex.put("E4", "SnackE4");
+        snackIndex.put("E5", "SnackE5");
+
+//Code get related info to product mentioned in other file. such as price. or this is list should contain price and stuff next the name with seperatie ,
+
+
+// Check stock, funds inputted, etc?
+ // Prompt user for snack code
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the code of the snack product: ");
+        String userInput = scanner.nextLine().toUpperCase();
+        if (snackIndex.containsKey(userInput)) {
+            // Snack Exists
+            String snackProduct = snackIndex.get(userInput);
+            System.out.println("Dispensing" + snackProduct);
+        } else {
+            System.out.println("Out of Order.");
+        }
+    }
+}
