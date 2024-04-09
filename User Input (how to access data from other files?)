@@ -7,6 +7,9 @@ public class SnackIndex {
         Map<String, String> snackIndex = new HashMap<>();
 
 //Button Code yields corresponding snack EDIT NAMES OF SNACK
+//  REMOVE THIS PART AND REPLACE WITH ACCESSING INFO FROM OTHER SLIDE?
+// ASSUME PRE_EXISTING SNACKS FILLER
+
         snackIndex.put("A1", "SnackA1");
         snackIndex.put("A2", "SnackA2");
         snackIndex.put("A3", "SnackA3");
@@ -35,18 +38,42 @@ public class SnackIndex {
 
 //Code get related info to product mentioned in other file. such as price. or this is list should contain price and stuff next the name with seperatie ,
 
-
-// Check stock, funds inputted, etc?
- // Prompt user for snack code
+// Multi Option Test
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the code of the snack product: ");
-        String userInput = scanner.nextLine().toUpperCase();
-        if (snackIndex.containsKey(userInput)) {
-            // Snack Exists
-            String snackProduct = snackIndex.get(userInput);
-            System.out.println("Dispensing" + snackProduct);
-        } else {
-            System.out.println("Out of Order.");
+        System.out.println("What would you like to do?");
+        System.out.println("Buy Product");
+        System.out.println("View Product Information");
+        System.out.println("View Product Ratings");
+        if userInput == "Buy Product") {
+            System.out.print("Please enter the code of the product: ");
+                String userInput = scanner.nextLine().toUpperCase();
+                if (snackIndex.containsKey(userInput)) {
+                    // Snack Exists
+                    String snackProduct = snackIndex.get(userInput);
+                    System.out.println("Dispensing" + snackProduct);
+                } else {
+                    System.out.println("Product does not exist.");
+                }
+        }
+        if userInput == "View Product Information") {
+            System.out.print("Enter the code of the snack product: ");
+                String userInput = scanner.nextLine().toUpperCase();
+                if (snackIndex.containsKey(userInput)) {
+                    // Snack Exists
+//FILL
+                } else {
+                    System.out.println("Product does not exist.");
+                }
+        }
+        if userInput == "View Product Ratings") {
+            System.out.print("Enter the code of the snack product: ");
+                String userInput = scanner.nextLine().toUpperCase();
+                if (snackIndex.containsKey(userInput)) {
+                    // Snack Exists
+//FILL
+                } else {
+                    System.out.println("Product does not exist.");
+                }
         }
     }
 }
