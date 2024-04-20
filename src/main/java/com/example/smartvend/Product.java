@@ -13,8 +13,7 @@ public class Product {
     private String name;
 
     @Id
-    @Field("item_id") // Use this annotation to map the id field in MongoDB to this field
-    private String item_id;
+    private String id;
 
     @Field("price")
     private float price;
@@ -28,9 +27,9 @@ public class Product {
     @Field("reviews")
     private List<String> reviews;
 
-    public Product(String name, String item_id, float price, int quantity, String category) {
+    public Product(String name, String id, float price, int quantity, String category) {
         this.name = name;
-        this.item_id = item_id;
+        this.id = id;
         this.price = price;
         this.quantity = quantity;
         this.category = category;
@@ -44,7 +43,7 @@ public class Product {
     }
 
     public String getId() {
-        return item_id;
+        return id;
     }
 
     public float getPrice() {
